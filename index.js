@@ -8,6 +8,7 @@ app.listen(3000, () => {
 });
 
 app.use("/bootstrap", express.static("node_modules/bootstrap/dist"));
+app.use(express.static("public"));
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
